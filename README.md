@@ -11,10 +11,10 @@ https://lyrical-brain-e0f.notion.site/mobi-beginner-week-2-bb8596254a084efdb5761
 
 ### 페어-편성
 ```
-Pair-1: Levi - Jack
+Pair-1: Levi - Rin
 Pair-2: Danial - Ann
-Pair-3: Noel - Amy
-Pair-4: Rin - Kimi
+Pair-3: Noel - Jack
+Pair-4: Amy - Kimi
 ```
 
 ### 과제
