@@ -1,7 +1,7 @@
 # mobi-2th-begginer-1
 ### 1주차
 ```
-https://lyrical-brain-e0f.notion.site/mobi-beginner-week-1-b3bc3c7613b846fca39386b59d2551dc?pvs=4
+https://lyrical-brain-e0f.notion.site/mobi-beginner-week-2-bb8596254a084efdb57619970ef39088?pvs=4
 ```
 
 ### 기간
