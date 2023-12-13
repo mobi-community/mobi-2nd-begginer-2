@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-
+import logo from "./logo.svg";
+import "./App.css";
+import BasicButton from "./components/BasicButton";
+import { ThemeProvider } from "styled-components";
+import theme from "./style/theme";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <BasicButton variant={"primary"} shape={"shape"} size={"small"}>
+        로그인
+      </BasicButton>
+      <BasicButton variant={"secondary"} shape={"round"} size={"medium"}>
+        로그인
+      </BasicButton>
+    </ThemeProvider>
   );
 }
 

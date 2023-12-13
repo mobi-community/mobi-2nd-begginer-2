@@ -1,8 +1,14 @@
+/** @typedef {object} Colors */
+/** @typedef {object} FontSize */
+/** @typedef {object} FontWeight */
+/** @typedef {object} Theme */
+
+/** @type {Colors} */
 const COLORS = {
   primary: {
-    pink: "FF9DA9",
-    green: "67BD7A",
-    mint: "66EBCB",
+    pink: "#FF9DA9",
+    green: "#67BD7A",
+    mint: "#66EBCB",
     navy: "#12678C",
     violet: "#8E29BE",
   },
@@ -19,6 +25,7 @@ const COLORS = {
   },
 };
 
+/** @type {FontSize} */
 const FONT_SIZE = {
   x_small: "14px",
   small: "16px",
@@ -27,15 +34,18 @@ const FONT_SIZE = {
   x_large: "22px",
 };
 
+/** @type {FontWeight} */
 const FONT_WEIGHT = {
   thin: 400,
   regular: 500,
   bold: 700,
 };
 
+/** @type {Theme} */
 const theme = {
   COLORS,
   FONT_SIZE,
   FONT_WEIGHT,
 };
+
 export default theme;
