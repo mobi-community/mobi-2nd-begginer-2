@@ -3,6 +3,7 @@ module.exports = {
     browser: true,
     es6: true,
   },
+
   parserOptions: {
     ecmaFeatures: {
       modules: true,
@@ -11,7 +12,9 @@ module.exports = {
     ecmaVersion: 2020,
     sourceType: "module",
   },
+
   plugins: ["react"],
+
   rules: {
     "react/jsx-uses-vars": "error", //'warning' //var쓰지 마라
     "react/jsx-uses-react": "error", //리액트 기본 문법 써라
@@ -24,4 +27,6 @@ module.exports = {
       },
     ],
   },
+
+  extends: ["plugin:storybook/recommended"]
 };
