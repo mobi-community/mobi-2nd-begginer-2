@@ -26,14 +26,14 @@ const FONT_WEIGHT = {
 
 const BOX_SHADOW = {
     container: '-5px -5px 10px #fff, 5px 5px 10px #babebc',
-    dropShadow: '-5px -5px 10px #fff, 5px 5px 8px #babebc',
-    innerShadow: 'inset 1px 1px 2px #babebc, inset -1px -1px 2px #fff',
-}
+    popupBtn: '-5px -5px 10px #fff, 5px 5px 8px #babebc',
+    popdownBtn: 'inset 1px 1px 2px #babebc, inset -1px -1px 2px #fff',
+};
 
 const theme = {
     COLORS,
     FONT_SIZE,
     FONT_WEIGHT,
-    BOX_SHADOW
+    BOX_SHADOW,
 };
 export default theme;

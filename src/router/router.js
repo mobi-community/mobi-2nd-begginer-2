@@ -1,10 +1,10 @@
 import { createBrowserRouter } from 'react-router-dom';
-import App from '../App';
+import SignUpForm from '../pages/signup-form';
 
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <App />,
+        element: <SignUpForm />,
     },
 ]);
 
