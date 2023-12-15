@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+### story book
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+프로젝트 진행 기간 : 20231213 ~ 20231220
 
-## Available Scripts
+2023.12.13(수)
+재사용될 가능성이 있는 요소들을 공용컴포넌트로 만들어 디자인 시스템을 구축해 생산성 높은 환경을 구축해두었습니다.
+프로젝트의 원활한 진행을 위해 같은 디자인이 적용된 요소들이 반복해서 나타나는 회원가입 폼을 피그마로 임의로 작업했습니다.
+피그마에서 컴포넌트화될 요소들을 디자인 토큰 프레임 안에 모아두어 빠르게 theme.style.js 로 옮겨올 수 있었습니다.
 
-In the project directory, you can run:
+<p align="center">
+<p>design token</p>
+<img src="https://github.com/55555-Jyeon/admin-toggle-page/assets/134191817/1b80108a-4209-4812-9c9f-75281768df35">
+<p>간단하게 만든 회원가입 폼입니다.</p>
+<img src="https://github.com/55555-Jyeon/admin-toggle-page/assets/134191817/eef85e1e-2980-4681-a5b1-ed8c9480fa1f">
+<img src="https://github.com/55555-Jyeon/admin-toggle-page/assets/134191817/43c65336-5e0f-48d9-959f-b24295868c0b">
+</p>
 
-### `npm start`
+가영 회고록)
+피그마로 디자인을 미리하여, 빠르게 공용 css들을 만들 수 있었습니다.
+하지만 Token Studio를 적용 후 피그마에 적용해야한다는 것을 디자인 후 알아차려, 다시 하기에는 너무 생산성이 저하될 거 같다는 생각을 하여 직접 옮겼습니다...^^
+다음에는 Token Studio를 선! 적용 해보아야겠습니다.
+피그마를 이용하면 리액트에서 핵심인 컴포넌트를 만들고, 구조를 미리 파악하는데에도 용이하여 규모가 커질수록 더 좋을 거 같다는 생각을했습니다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+주연 회고록)
+이번에는 페이지가 하나인 간단한 프로젝트여서 피그마에서 따로 Token Studio 플러그인을 사용하지 않았지만 규모가 큰 프로젝트의 경우엔 이 플러그인을 사용하면 통일성 있는 디자인을 보다 효율적으로 진행할 수 있을 것 같습니다. Token Studio 플러그인의 경우 보다 정확하고 신속하게 체계적으로 디자인을 진행이 가능할 것으로 보였기 때문에 추후에 꼭 써보고 싶습니다.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+2023.12.14(목)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<p align="center">
+<p>story book 설치 </br> figma에서 만든 component asset으로 만들어 적용 시도해보기</p>
+<p>stories를 만들어 열심히 해봤지만 알 수 없는 error들이 !다양하게! 발생해 미처 완성하지 못함</p>
+<img src="https://github.com/kiminn/mobi-2w/assets/134191815/9b68e69e-9b3b-4556-8f3f-35fd17e520da">
+</p>
 
-### `npm run build`
+가영 회고록)
+스토리북과 관련된 유튜브 영상.. 블로그들을 참고하여 열심히 적용시켜보았지만,
+알 수 없는 오류들에 맞닥뜨렸습니다. (심지어 오류내용도 너무나도 불친절ㅋ)
+이를 열심히 검색해보았지만, 자기들도 안된다고 한다는..?... 🤷‍♀️
+버전차이로 안되는 것들도 있었는데,,,,,, 하나 해결하면 또 하나 오류나고.. 해결오류해결오류♾️♾️
+충분한 시간을 썼고, 다음 번에 다시 시도...해볼..예정입니다...
+어디서부터 잘못된 건지 (?)
+이를 보완하여 다시 개념부분을 숙지하고 차근차근 해나가야겠습니다.
+늘어난 건 나의 욕실력...!
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+주연 회고록)
+한 줄 요약: 알 것 같은데 안 되는 부분이 너무 약오름
+이론적으로는 분명 돼야 맞는 것 같은데 왜 안 되는지 모르겠고, 검색해봐도 해결 방법을 제대로 아는 사람이 없었습니다. 당황스러웠고 에러 내용을 복붙해서 검색해봤지만 결국 미결인 채로 끝났습니다. 아직 안 익숙해서 제대로 컨트롤을 못 하는 것 같아 좀 더 개인적으로 추가 공부 후 적용해봐야 할 것 같다는 결론을 내렸고 내일은 일단
+머리를 식힐 겸 다른 스타일 라이브러리들부터 찬찬히 숙지해나갈 계획입니다..
+아직도 왜 사용하지 않은 name과 displayName 관련 오류가 난 건지 모르겠습니다,,_^^_
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2023.12.15(금)
 
-### `npm run eject`
+아래 다양한 라이브러리를 사용하여 디자인 시스템을 적용하고 장단점과 다른 style 라이브러리와의 차이점을 명확히 구분하기
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+(1) tailwind-css
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+(2) panda-css
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+(3) styled-components
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+(4) emotion
