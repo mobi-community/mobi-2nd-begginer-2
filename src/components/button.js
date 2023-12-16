@@ -1,10 +1,13 @@
 import { css, styled } from "styled-components";
 
-const PopUpButton = ({ variant, size, children, ...rest }) => {
+const PopUpButton = ({ variant, size, label, children, ...rest }) => {
   return (
+    <>
     <Button variant={variant} size={size} {...rest}>
       {children}
     </Button>
+    <label>{label}</label>
+    </>
   );
 };
 export default PopUpButton;
@@ -27,7 +30,7 @@ const variantCSS = {
 };
 const sizeCSS = {
   submit: css`
-    width: 40%;
+    width: 280px;
     height: 42px;
     border-radius: 16px;
   `,
@@ -52,6 +55,7 @@ const sizeCSS = {
   `,
 };
 
+// 재사용을 해야하니 공통된 최소한의 속성만 적어주는 것이 좋다. (교집합되는!)
 const Button = styled.button`
   ${({ variant }) => variantCSS[variant]}
   ${({ size }) => sizeCSS[size]}
