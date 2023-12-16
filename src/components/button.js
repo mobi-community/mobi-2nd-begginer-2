@@ -55,7 +55,7 @@ const sizeCSS = {
   `,
 };
 
-// 재사용을 해야하니 공통된 최소한의 속성만 적어주는 것이 좋다. (교집합되는!)
+// 재사용을 해야하니 공통된 최소한의 속성만 적어주는 것이 좋다. (교집합되는!) control
 const Button = styled.button`
   ${({ variant }) => variantCSS[variant]}
   ${({ size }) => sizeCSS[size]}

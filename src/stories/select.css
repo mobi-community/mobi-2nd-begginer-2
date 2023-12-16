@@ -1,0 +1,17 @@
+/* input */
+/* default */
+.select {
+    width: 100px;
+    height: 38px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    margin-left: 2%;
+    transition: all .6s;
+    background-color: #EBECF0;
+    box-shadow: -5px -5px 10px #fff, 5px 5px 8px #babebc;
+
+    &:focus {
+        box-shadow: inset 1px 1px 2px #babebc, inset -1px -1px 2px #fff;
+    }
+}
