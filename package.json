@@ -3,15 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@storybook/addon-backgrounds": "^7.6.4",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
-    "storybook-addon-react-router-v6": "^2.0.10",
-    "storybook-addon-styled-component-theme": "^2.0.0",
+    "storybook-dark-mode": "^3.0.3",
     "styled-components": "^6.1.1",
     "web-vitals": "^2.1.4"
   },
@@ -42,23 +37,25 @@
     ]
   },
   "devDependencies": {
-    "@react-theming/storybook-addon": "^1.1.10",
-    "@storybook/addon-essentials": "^7.6.4",
-    "@storybook/addon-interactions": "^7.6.4",
-    "@storybook/addon-links": "^7.6.4",
+    "@storybook/addon-essentials": "^7.6.5",
+    "@storybook/addon-interactions": "^7.6.5",
+    "@storybook/addon-links": "^7.6.5",
     "@storybook/addon-onboarding": "^1.0.10",
-    "@storybook/blocks": "^7.6.4",
-    "@storybook/preset-create-react-app": "^7.6.4",
-    "@storybook/react": "^7.6.4",
-    "@storybook/react-webpack5": "^7.6.4",
-    "@storybook/test": "^7.6.4",
+    "@storybook/blocks": "^7.6.5",
+    "@storybook/preset-create-react-app": "^7.6.5",
+    "@storybook/react": "^7.6.5",
+    "@storybook/react-webpack5": "^7.6.5",
+    "@storybook/test": "^7.6.5",
     "eslint": "^8.55.0",
     "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-storybook": "^0.6.15",
     "prettier": "^3.1.1",
     "prop-types": "^15.8.1",
-    "storybook": "^7.6.4",
+    "storybook": "^7.6.5",
     "webpack": "^5.89.0"
+  },
+  "overrides": {
+    "react-refresh": "0.11.0"
   }
 }

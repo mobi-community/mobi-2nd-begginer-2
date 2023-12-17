@@ -16,6 +16,7 @@ const COLORS = {
 	error: '#EF6969',
 	white: '#FFFFFF',
 	black: '#000000',
+	line: '#DDDDDD',
 	gray: {
 		100: '#E7E7E7',
 		200: '#CBCBCB',
