@@ -1,5 +1,8 @@
 import BasicButton from '../components/BasicButton'
 import BasicInput from '../components/BasicInput'
+import SelectBox from 'components/SelectBox'
+export const mockSelect = ['option1', 'option2', 'option3', 'option4']
+
 const SignUpForm = () => {
 	return (
 		<>
@@ -15,6 +18,7 @@ const SignUpForm = () => {
 				width={500}
 				height={50}
 			/>
+			<SelectBox data={mockSelect} size={'small'} />
 		</>
 	)
 }

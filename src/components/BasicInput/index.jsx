@@ -40,7 +40,7 @@ BasicInput.propTypes = {
 	/**
 	 * 라벨의 이름
 	 */
-	label: PropTypes.numb,
+	label: PropTypes.string,
 	/**
 	 * 라벨의 이름
 	 */

@@ -12,6 +12,7 @@ const Label = styled.label`
 	${flexCenter};
 	font-size: ${({ labelSize }) => (labelSize ? labelSize : 15)}px;
 	padding: 10px;
+	min-width: 70px;
 `
 
 const variantCSS = {
