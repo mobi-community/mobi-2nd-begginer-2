@@ -8,6 +8,7 @@ const BasicButton = ({
 	children,
 	fontSize,
 	border,
+	badge,
 	...rest
 }) => {
 	return (
@@ -19,6 +20,7 @@ const BasicButton = ({
 			border={border}
 			{...rest}
 		>
+			{badge.value && <S.Badge type={badge.type}>{badge.value}</S.Badge>}
 			{children}
 		</S.Button>
 	)
@@ -32,6 +34,10 @@ BasicButton.defaultProps = {
 	border: false,
 	fontSize: 12,
 	primary: true,
+	badge: {
+		type: 'alert',
+		value: 100,
+	},
 }
 
 //해당 컴포넌트에 필요한 props를 정리해놓은 것
@@ -57,4 +63,11 @@ BasicButton.propTypes = {
 	 * 버튼 안에 텍스트
 	 */
 	children: PropTypes.string,
+	/*
+	 * 버튼 안에 알림 배지
+	 */
+	badge: PropTypes.shape({
+		value: PropTypes.number,
+		type: PropTypes.oneOf(['warn', 'alert', 'default']),
+	}),
 }

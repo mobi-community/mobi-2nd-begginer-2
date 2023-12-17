@@ -73,8 +73,24 @@ const Button = styled.button`
 	cursor: pointer;
 	font-weight: 800;
 	${flexCenter}
+	position: relative;
+`
+
+const Badge = styled.div`
+	padding: 5px;
+	border-radius: 50%;
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	background-color: ${({ type, theme }) =>
+		type === 'warn'
+			? theme.COLORS.warn
+			: type === 'alert'
+				? theme.COLORS.error
+				: theme.COLORS.primary.mint};
 `
 
 export const S = {
 	Button,
+	Badge,
 }

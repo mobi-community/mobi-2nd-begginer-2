@@ -1,7 +1,36 @@
-import BasicButton from '../components/BasicButton'
-import BasicInput from '../components/BasicInput'
+import BasicButton from 'components/BasicButton'
+import BasicInput from 'components/BasicInput'
+import Tab from 'components/Tab'
 import SelectBox from 'components/SelectBox'
+import CheckBox from 'components/CheckBox'
+
 export const mockSelect = ['option1', 'option2', 'option3', 'option4']
+export const navbarList = [
+	{
+		title: '메일',
+		id: 1,
+	},
+	{
+		title: '카페',
+		id: 2,
+	},
+	{
+		title: '블로그',
+		id: 3,
+	},
+	{
+		title: '쇼핑',
+		id: 4,
+	},
+	{
+		title: '뉴스',
+		id: 5,
+	},
+	{
+		title: '증권',
+		id: 6,
+	},
+]
 
 const SignUpForm = () => {
 	return (
@@ -19,6 +48,8 @@ const SignUpForm = () => {
 				height={50}
 			/>
 			<SelectBox data={mockSelect} size={'small'} />
+			<Tab data={navbarList} />
+			<CheckBox type="checkbox" label={'로그인 상태 유지'} id={'Checked'} />
 		</>
 	)
 }

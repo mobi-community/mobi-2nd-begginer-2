@@ -14,6 +14,7 @@ const COLORS = {
 	},
 	font: '#0F0F0F',
 	error: '#EF6969',
+	warn: '#f5be1b',
 	white: '#FFFFFF',
 	black: '#000000',
 	line: '#DDDDDD',
