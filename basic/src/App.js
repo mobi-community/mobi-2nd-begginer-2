@@ -5,6 +5,7 @@ import SignUpForm from './pages'
 import GlobalStyles from 'style/global'
 import 'tailwindcss/tailwind.css'
 import TailwindPage from 'pages/TailwindPage'
+
 function App() {
 	return (
 		<ThemeProvider theme={theme}>
