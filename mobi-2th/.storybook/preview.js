@@ -1,5 +1,7 @@
 import { ThemeProvider } from 'styled-components';
 import theme from "../src/styles/theme.style"
+import { BrowserRouter } from 'react-router-dom';
+
 
 /** @type { import('@storybook/react').Preview } */
 const preview = {
@@ -18,7 +20,9 @@ const preview = {
 export const decorators = [
   Story =>(
     <ThemeProvider theme={theme}>
-      <Story/>
+          <BrowserRouter>
+                <Story/>
+            </BrowserRouter>
     </ThemeProvider>
   )
 ]
