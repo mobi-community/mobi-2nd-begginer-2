@@ -1,5 +1,4 @@
-import { Button, imgName } from './Button';
-
+import { Button, imgName } from "./Button";
 
 // args: 인수(값, 변수, 참조 등 전달되는 값)를 정의
 export default {
@@ -11,13 +10,13 @@ export const widthIcon = {
     // 선택지에 추가할 객체 지정
     options: Object.keys(imgName),
     // 이미지 선택하는 방식
-    control: { type: 'select' }
-  }
-}
+    control: { type: "select" },
+  },
+};
 
 export const SubmitButton = {
   args: {
-    label: 'Sign Up',
+    label: "Sign Up",
   },
 };
 
@@ -29,19 +28,18 @@ export const SNSLogin = {
     primary: true,
     size: "largeCircle",
     hasImg: true,
-    image: 'DefaultImg', 
+    image: "DefaultImg",
   },
 };
 
 export const Gender = {
   argTypes: {
-    ...widthIcon
+    ...widthIcon,
   },
   args: {
     primary: false,
     size: "smallCircle",
     hasImg: true,
-    image: 'DefaultImg', 
+    image: "DefaultImg",
   },
 };
-

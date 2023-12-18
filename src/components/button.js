@@ -3,10 +3,10 @@ import { css, styled } from "styled-components";
 const PopUpButton = ({ variant, size, label, children, ...rest }) => {
   return (
     <>
-    <Button variant={variant} size={size} {...rest}>
-      {children}
-    </Button>
-    <label>{label}</label>
+      <Button variant={variant} size={size} {...rest}>
+        {children}
+      </Button>
+      <label>{label}</label>
     </>
   );
 };

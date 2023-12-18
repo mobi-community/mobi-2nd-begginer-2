@@ -1,0 +1,24 @@
+.button {
+  border: none;
+  outline: none;
+  background-color: #ebecf0;
+  box-shadow: -5px -5px 10px #fff, 5px 5px 8px #babebc;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #888;
+  transition: all 0.6s;
+  margin-right: 8px;
+
+  /* 중앙정렬용 */
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  &:focus,
+  &:hover,
+  &:disabled,
+  &.active {
+    box-shadow: inset 1px 1px 2px #babebc, inset -1px -1px 2px #fff;
+  }
+}

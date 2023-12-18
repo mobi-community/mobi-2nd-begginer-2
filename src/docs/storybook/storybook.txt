@@ -7,3 +7,6 @@
 는 단일 JavaScript 개체에서 해당 인수를 정의하는 Storybook의 메커니즘입니다
 
 5. configure.mdx ~ 중요해요^^
+
+6. npm install storybook-addon-react-router-v6
+react-router-dom 설치^^
