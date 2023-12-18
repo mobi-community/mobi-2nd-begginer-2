@@ -10,7 +10,6 @@ const TWBasicButton = ({ size }) => {
 					100
 				</div>
 			</div>
-
 			{/*secondary*/}
 			<div className="w-[110px] h-30 relative">
 				<button className="text-white w-full font-extrabold bg-light-blue rounded-full p-5 h-12 flex justify-center items-center  font-extrsabold hover:bg-blue cursor-pointer">
