@@ -2,8 +2,13 @@ import { useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import styled, { css } from "styled-components";
 import { flexCenter } from "../styles/common.style";
+import PropsTypes from "prop-types";
+import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
+import KeyboardDoubleArrowLeftIcon from "@mui/icons-material/KeyboardDoubleArrowLeft";
 
-const Pagination = ({ totalLength, pagesPerGroup, variant }) => {
+const Pagination = ({ totalLength, pagesPerGroup, variant, size, shape }) => {
   //useSearchParams => 쿼리스트링 추출 {page : 12 }
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -42,7 +47,7 @@ const Pagination = ({ totalLength, pagesPerGroup, variant }) => {
     const newCurrentGroup = Math.ceil(currentPage / pagesPerGroup);
     searchParams.set("page", currentPage); // page라는 이름의 param에 current라는 value값.
     setSearchParams(searchParams);
-  }, [currentPage]);  // currentpage(버튼을 누를 때 몇 페이지인지) 가 변할 때마다 page라는 이름의 param에 currentPage라는 value값을 넣어준다. 
+  }, [currentPage]); // currentpage(버튼을 누를 때 몇 페이지인지) 가 변할 때마다 page라는 이름의 param에 currentPage라는 value값을 넣어준다.
 
   useEffect(() => {
     setCurrentPage(page);
@@ -60,17 +65,23 @@ const Pagination = ({ totalLength, pagesPerGroup, variant }) => {
       const pageNumber = (currentGroup - 1) * pagesPerGroup + idx + 1;
       // data가 없으면 얼리 리턴으로 버튼 생성 X
       if (totalLength > perPage * idx) return pageNumber;
+      return null; // Add a return statement at the end of the arrow function
     });
 
   return (
-    <S.Wrapper >
-      <S.Button onClick={onMoveStartPage}>≪</S.Button>
-      <S.Button onClick={onMovePrevPage} >＜</S.Button>
+    <S.Wrapper variant={variant} size={size} shape={shape}>
+      <S.Button onClick={onMoveStartPage}>
+        <KeyboardDoubleArrowLeftIcon />
+      </S.Button>
+      <S.Button onClick={onMovePrevPage}>
+        <KeyboardArrowLeftIcon />
+      </S.Button>
       {/*버튼들 현재 그룹 => 해당 버튼들만 보여주기*/}
       {Buttons.map((pageNumber) => {
         if (!pageNumber) return;
         return (
-          <S.Button variant={variant}
+          <S.Button
+            variant={variant}
             onClick={() => {
               onMoveTargetPage(pageNumber);
             }}
@@ -80,59 +91,91 @@ const Pagination = ({ totalLength, pagesPerGroup, variant }) => {
           </S.Button>
         );
       })}
-      <S.Button onClick={onMoveNextPage} >＞</S.Button>
-      <S.Button onClick={onMoveLastPage} >≫</S.Button>
+      <S.Button onClick={onMoveNextPage}>
+        <KeyboardArrowRightIcon />
+      </S.Button>
+      <S.Button onClick={onMoveLastPage}>
+        <KeyboardDoubleArrowRightIcon />
+      </S.Button>
     </S.Wrapper>
   );
 };
 export default Pagination;
 
-const variantCSS={
-    primary:css`
-        background-color: ${({theme}) => theme.COLORS.primary[100]};
-    `,
-    secondary:css`
-        background-color: ${({theme}) => theme.COLORS.primary[400]};
-    `
-}
+const variantCSS = {
+  primary: css`
+    background-color: ${({ theme }) => theme.COLORS.primary[300]};
+  `,
+  secondary: css`
+    background-color: ${({ theme }) => theme.COLORS.secondary[400]};
+  `,
+};
+
+const sizeCSS = {
+  small: css`
+    width: 40px;
+    height: 40px;
+    font-size: ${({ theme }) => theme.FONT_SIZE.small};
+  `,
+  medium: css`
+    width: 45px;
+    height: 45px;
+    font-size: ${({ theme }) => theme.FONT_SIZE.medium};
+  `,
+  large: css`
+    width: 50px;
+    height: 50px;
+    font-size: ${({ theme }) => theme.FONT_SIZE.large};
+  `,
+};
+
+const shapeCSS = {
+  round: css`
+    border-radius: 50%;
+  `,
+  square: css`
+    border-radius: 5px;
+  `,
+  stylerish: css`
+    border-radius: 50% 20% / 10% 40%;
+  `,
+};
 
 const Wrapper = styled.div`
-  width: 500px;
+  width: 1000px;
   height: 100px;
   ${flexCenter}
 
+  & button {
+    ${({ variant }) => variantCSS[variant]}
+    ${({ size }) => sizeCSS[size]}
+    text-align: center;
+    ${({ shape }) => shapeCSS[shape]}
+  }
 `;
 
 const Button = styled.button`
-    ${({isFocus, variant})=>isFocus && variantCSS[variant]}
+  ${({ isFocus, variant }) => isFocus && variantCSS[variant]}
   color: ${({ isFocus }) => (isFocus ? "white" : "black")};
-  width: 30px;
+  font-weight: ${({ isFocus, theme }) =>
+    isFocus ? theme.FONT_WEIGHT.bold : theme.FONT_WEIGHT.regular};
+
+  /* width: 30px;
   height: 30px;
-  font-size: 15px;
-  font-weight: 400;
-  border-radius: 50%;
+  font-size: 15px; */
+
   cursor: pointer;
 `;
-
-const sizeCSS = {
-  small:css`
-      width: 20px;
-      height: 20px;
-      font-size: ${({theme}) => theme.FONT_SIZE.small};
-  `,
-  medium:css`
-      width: 26px;
-      height: 26px;
-      font-size: ${({theme}) => theme.FONT_SIZE.medium};
-  `,
-  large:css`
-      width: 30px;
-      height: 30px;
-      font-size: ${({theme}) => theme.FONT_SIZE.large};`
-}
-
 
 export const S = {
   Wrapper,
   Button,
+};
+
+Pagination.propTypes = {
+  /** * 컬러 변경 */ variant: PropsTypes.oneOf(["primary", "secondary"]),
+  /** * 총 게시물 수 */ totalLength: PropsTypes.number,
+  /** * 페이지당 보여줄 게시물 수 */ pagesPerGroup: PropsTypes.number,
+  /** 사이즈 크기 조절 */ size: PropsTypes.oneOf(["small", "medium", "large"]),
+  /** 모양 조절 */ shape: PropsTypes.oneOf(["round", "square", "stylerish"]),
 };

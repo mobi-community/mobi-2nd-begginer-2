@@ -1,26 +1,27 @@
-import SSSelect from "./select"
+import SSSelect from "./select";
 
 export default {
-    component: SSSelect,
-    title: 'SSSelect',
-    tags:['autodocs']
-}
+  component: SSSelect,
+  title: "SSSelect",
+  tags: ["autodocs"],
+};
 
-export const Primary={
-    args:{ // arguments 인자 
-        label:'primary',
-        variant:'primary',
-        data:['나는요', '오빠가', '좋은걸']
-    }
-}
+export const Primary = {
+  args: {
+    // arguments 인자
+    label: "primary",
+    variant: "primary",
+    data: ["나는요", "오빠가", "좋은걸"],
+  },
+};
 
-export const Secondary ={
-    args:{
-        label:'secondary',
-        variant:'secondary',
-        data:['나는요', '오빠가', '좋은걸']
-    }
-}
+export const Secondary = {
+  args: {
+    label: "secondary",
+    variant: "secondary",
+    data: ["나는요", "오빠가", "좋은걸"],
+  },
+};
 
 // (2) * args
 // https://storybook.js.org/docs/writing-stories/args
