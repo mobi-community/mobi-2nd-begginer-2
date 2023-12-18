@@ -1,0 +1,9 @@
+1. npx storybook@latest init
+2. eslint 깔라고해서 깜 >> https://github.com/storybookjs/eslint-plugin-storybook#readme
+----- npm start 성공적!
+3. npm run storybook
+----- npm start 성공적!
+4. Args
+는 단일 JavaScript 개체에서 해당 인수를 정의하는 Storybook의 메커니즘입니다
+
+5. configure.mdx ~ 중요해요^^
