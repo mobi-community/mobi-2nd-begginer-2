@@ -2,10 +2,14 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { ReactComponent as Checked } from 'asset/checked.svg'
 import { ReactComponent as NonChecked } from 'asset/nonChecked.svg'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const CheckBox = ({ label, checked, id, size, fontSize, ...checkBoxProps }) => {
 	const [isChecked, setIsChecked] = useState(checked)
+
+	useEffect(() => {
+		setIsChecked(!isChecked)
+	}, [checked])
 
 	const isClickChecked = () => {
 		setIsChecked(!isChecked)
@@ -44,10 +48,6 @@ const CheckBoxArea = styled.div`
 	& input {
 		display: none;
 	}
-
-	& label {
-		font-size: ${({ theme }) => theme.FONT_SIZE.small};
-	}
 `
 const MediumNonChecked = styled(NonChecked)`
 	width: 30px;
@@ -68,7 +68,7 @@ const LargeChecked = styled(Checked)`
 `
 
 const Label = styled.label`
-	padding-left: 10px;
+	padding-left: 1rem;
 	font-size: ${({ fontSize }) => (fontSize ? fontSize : 10)}px;
 `
 

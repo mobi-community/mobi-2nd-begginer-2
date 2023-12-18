@@ -3,6 +3,7 @@ import CheckBox from '.'
 export default {
 	title: 'Components/CheckBox',
 	component: CheckBox,
+	parameters: {
 		layout: 'centered',
 	},
 	tags: ['autodocs'], //문서
@@ -10,6 +11,7 @@ export default {
 
 const defaultArgs = {
 	checked: false,
+	fontSize: 15,
 	label: '아이디 저장',
 }
 
