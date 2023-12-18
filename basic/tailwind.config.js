@@ -1,6 +1,8 @@
+const tw = require('tailwindcss/defaultTheme')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: ['./src/**/*.{html,js}'],
+	content: ['./src/**/*.{html,js,jsx}'],
 	theme: {
 		extend: {
 			colors: {
@@ -23,19 +25,17 @@ module.exports = {
 				black: '#000000',
 				line: '#DDDDDD',
 			},
-			fontSize: {
-				'x-small': '14px',
-				small: '16px',
-				medium: '18px',
-				large: '20px',
-				'x-large': '22px',
-			},
-			fontWeight: {
-				thin: 400,
-				regular: 500,
-				bold: 700,
-			},
 		},
 	},
-	plugins: [],
+	plugins: [
+		({ addUtilities }) => {
+			const newUtilities = {}
+			Object.keys(tw.colors).forEach(color => {
+				newUtilities[`.bg-${color}`] = { backgroundColor: tw.colors[color] }
+				newUtilities[`.text-${color}`] = { color: tw.colors[color] }
+				// Add other utility classes as needed
+			})
+			addUtilities(newUtilities, ['hover'])
+		},
+	],
 }

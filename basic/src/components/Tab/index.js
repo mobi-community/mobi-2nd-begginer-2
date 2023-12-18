@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import PropTypes from 'prop-types'
 import { S } from './style'
+import { navbarList } from 'pages'
+
 const Tab = ({ data, primary }) => {
 	//데이터의 id가 들어감
 	const [selectId, setSelectId] = useState()
@@ -11,7 +13,7 @@ const Tab = ({ data, primary }) => {
 
 	return (
 		<S.Wrapper>
-			{data.map(item => (
+			{navbarList.map(item => (
 				<S.TabWrapper
 					onClick={() => {
 						onClickSelect(item.id)

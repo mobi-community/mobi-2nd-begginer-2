@@ -3,7 +3,6 @@ import BasicInput from 'components/BasicInput'
 import Tab from 'components/Tab'
 import SelectBox from 'components/SelectBox'
 import CheckBox from 'components/CheckBox'
-import TWBasicButton from 'Tailwind/BasicButton'
 
 export const mockSelect = ['option1', 'option2', 'option3', 'option4']
 export const navbarList = [
@@ -49,7 +48,7 @@ const SignUpForm = () => {
 				height={50}
 			/>
 			<SelectBox data={mockSelect} size={'small'} />
-			<Tab data={navbarList} />
+			{/* <Tab data={navbarList} primary={'primary'} /> */}
 			<CheckBox type="checkbox" label={'로그인 상태 유지'} id={'Checked'} />
 		</>
 	)

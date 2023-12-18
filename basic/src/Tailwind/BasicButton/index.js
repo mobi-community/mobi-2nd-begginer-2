@@ -1,26 +1,56 @@
-const TWBasicButton = ({ size }) => {
+import Badge from './Badge'
+import PropTypes from 'prop-types'
+
+const TWBasicButton = ({ varaint, size, shape, children }) => {
+	const variantCSS = {
+		primary: `bg-mint hover:bg-dark-mint text-white`,
+		secondary: 'text-white bg-light-blue hover:bg-blue',
+	}
+
+	const sizeCSS = {
+		small: 'w-[64px] h-[32px] py-4',
+		medium: 'w-[96px] h-[48px] py-4',
+		large: 'w-[128px] h-[64px] py-4',
+	}
+
+	const shapeCSS = {
+		default: 'rounded-none',
+		shape: 'rounded-lg',
+		round: 'rounded-3xl',
+	}
+
 	return (
-		<>
-			{/*primary*/}
-			<div className="w-[100px] h-30 relative">
-				<button className="text-white w-full bg-mint rounded p-5 font-extrabold hover:bg-dark-mint cursor-pointer">
-					로그인
+		<div className="flex p-5 gap-10">
+			{/*small*/}
+			<div className="relative">
+				<button
+					className={`bg-mint ${variantCSS[varaint]} ${sizeCSS[size]} ${shapeCSS[shape]} flex justify-center content-center p-2 font-extrabold cursor-pointer`}
+				>
+					{children}
 				</button>
-				<div className="p-5 rounded-3xl bg-error text-white font-extrabold w-12 h-5 flex justify-center items-center absolute -right-5 -top-4">
-					100
-				</div>
+				<Badge />
 			</div>
-			{/*secondary*/}
-			<div className="w-[110px] h-30 relative">
-				<button className="text-white w-full font-extrabold bg-light-blue rounded-full p-5 h-12 flex justify-center items-center  font-extrsabold hover:bg-blue cursor-pointer">
-					회원 가입
-				</button>
-				<div className="p-[2px] rounded-full  bg-error text-white font-extrabold w-[40px] h-[35px] flex justify-center items-center absolute -right-4 -top-2">
-					100
-				</div>
-			</div>
-		</>
+		</div>
 	)
 }
 
 export default TWBasicButton
+
+TWBasicButton.propTypes = {
+	/**
+	 * 버튼의 테마색
+	 */
+	varaint: PropTypes.oneOf(['primary', 'secondary']),
+	/**
+	 * 모양
+	 */
+	shape: PropTypes.oneOf(['default', 'shape', 'round']),
+	/**
+	 * size
+	 */
+	size: PropTypes.oneOf(['small', 'medium', 'large']),
+	/**
+	 * 모양
+	 */
+	children: PropTypes.string,
+}
