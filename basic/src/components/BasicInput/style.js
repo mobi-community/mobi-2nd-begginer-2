@@ -1,20 +1,49 @@
 import { styled, css } from 'styled-components'
 import { flexCenter } from 'style/common'
 
-const InputBox = styled.div`
-	width: ${({ width }) => (width ? width : 300)}px;
-	height: ${({ height }) => (height ? height : 50)}px;
-	display: grid;
-	grid-template-columns: 1fr 4fr;
-`
+/*인풋 사이즈 토큰*/
+const sizeCSS = {
+	small: css`
+		width: 200px;
+		height: 50px;
+		padding: 8px 0;
+	`,
 
-const Label = styled.label`
-	${flexCenter};
-	font-size: ${({ labelSize }) => (labelSize ? labelSize : 15)}px;
-	padding: 10px;
-	min-width: 70px;
-`
+	medium: css`
+		width: 300px;
+		height: 55px;
+		padding: 10px 0;
+	`,
+	large: css`
+		width: 400px;
+		height: 60px;
+		padding: 12px 0;
+	`,
 
+	full: css`
+		width: 100%;
+		height: 60px;
+		padding: 12px 0;
+	`,
+}
+
+/*폰트 사이즈 토큰*/
+const fontSizeCSS = {
+	small: css`
+		font-size: ${({ theme }) => theme.FONT_SIZE.small};
+	`,
+	medium: css`
+		font-size: ${({ theme }) => theme.FONT_SIZE.medium};
+	`,
+	large: css`
+		font-size: ${({ theme }) => theme.FONT_SIZE.large};
+	`,
+	full: css`
+		font-size: ${({ theme }) => theme.FONT_SIZE.large};
+	`,
+}
+
+/*테마 색상 토큰*/
 const variantCSS = {
 	primary: css`
 		background-color: ${({ theme }) => theme.COLORS.white};
@@ -29,11 +58,22 @@ const variantCSS = {
 	`,
 }
 
+const InputBox = styled.div`
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+`
+
+const Label = styled.label`
+	${flexCenter};
+	${({ size }) => (size ? fontSizeCSS[size] : fontSizeCSS['medium'])}
+`
+
 const Input = styled.input`
 	${({ primary }) =>
 		primary ? variantCSS['primary'] : variantCSS['secondary']}
+	${({ size }) => (size ? sizeCSS[size] : sizeCSS['medium'])}
+	${({ size }) => (size ? fontSizeCSS[size] : fontSizeCSS['medium'])}
 	border-radius: 10px;
-	font-size: ${({ fontSize }) => (fontSize ? fontSize : 15)}px;
 	padding: 10px;
 `
 

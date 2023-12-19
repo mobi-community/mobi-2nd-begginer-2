@@ -26,33 +26,21 @@ const BasicInput = ({
 
 BasicInput.propTypes = {
 	/**
-	 * 버튼의 테마색
+	 * 인풋의 테마색
 	 */
 	primary: PropTypes.bool,
 	/**
-	 * 인풋 박스 전체의 너비
+	 * 인풋의 사이즈
 	 */
-	width: PropTypes.number,
-	/**
-	 * 인풋 박스 전체의 높이
-	 */
-	height: PropTypes.number,
+	size: PropTypes.oneOf(['small', 'medium', 'large', 'full']),
 	/**
 	 * 라벨의 이름
 	 */
 	label: PropTypes.string,
 	/**
-	 * 라벨의 이름
-	 */
-	labelSize: PropTypes.string,
-	/**
 	 * 미리보기 텍스트
 	 */
 	placeholder: PropTypes.string,
-	/**
-	 * 폰트 사이즈
-	 */
-	fontSize: PropTypes.number,
 }
 
 export default BasicInput

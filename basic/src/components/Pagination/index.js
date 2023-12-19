@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-
+import { S } from './style'
 import { useState } from 'react'
 import styled from 'styled-components'
 import { flexCenter } from 'style/common'
@@ -98,31 +98,6 @@ const Pagination = ({ totalLength, pagesPerGroup, color, size, shape }) => {
 	)
 }
 export default Pagination
-
-const Wrapper = styled.div`
-	width: ${({ size }) =>
-		size == 'large' ? 600 : size == 'medium' ? 500 : 400}px;
-	height: 100px;
-	${flexCenter}
-`
-
-const Button = styled.button`
-	background-color: ${({ isFocus, color }) => (isFocus ? color : 'white')};
-	color: ${({ isFocus }) => (isFocus ? 'white' : 'black')};
-	width: ${({ size }) => (size == 'large' ? 40 : size == 'medium' ? 30 : 20)}px;
-	height: ${({ size }) =>
-		size == 'large' ? 40 : size == 'medium' ? 30 : 20}px;
-	font-size: ${({ size }) =>
-		size == 'large' ? 25 : size == 'medium' ? 15 : 12}px;
-	font-weight: 400;
-	border-radius: ${({ shape }) => (shape == 'default' ? '8px' : '50%')};
-	cursor: pointer;
-`
-
-export const S = {
-	Wrapper,
-	Button,
-}
 
 Pagination.propTypes = {
 	size: PropTypes.oneOf(['small', 'medium', 'large']),

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { S } from './style'
 import { navbarList } from 'pages'
 
-const Tab = ({ data, primary }) => {
+const Tab = ({ data, variant }) => {
 	//데이터의 id가 들어감
 	const [selectId, setSelectId] = useState()
 
@@ -13,17 +13,17 @@ const Tab = ({ data, primary }) => {
 
 	return (
 		<S.Wrapper>
-			{navbarList.map(item => (
+			{data.map(item => (
 				<S.TabWrapper
 					onClick={() => {
 						onClickSelect(item.id)
 					}}
-					primary={primary}
+					variant={variant}
 					id={item.id}
 					selectId={selectId}
 				>
-					{item.id == selectId && <S.Circle primary={primary} />}
-					<S.Text id={item.id} selectId={selectId} primary={primary}>
+					{item.id == selectId && <S.Circle variant={variant} />}
+					<S.Text id={item.id} selectId={selectId} variant={variant}>
 						{item.title}
 					</S.Text>
 				</S.TabWrapper>

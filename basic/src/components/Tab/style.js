@@ -1,4 +1,37 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+
+const variantCSS = {
+	primary: css`
+		color: ${({ id, selectId, theme }) =>
+			id == selectId ? theme.COLORS.primary.blue : 'black'};
+	`,
+
+	secondary: css`
+		color: ${({ id, selectId, theme }) =>
+			id == selectId ? theme.COLORS.primary.mint : 'black'};
+	`,
+}
+
+const borderVariantCSS = {
+	primary: css`
+		border-bottom: ${({ id, selectId, theme }) =>
+			id == selectId ? `3px solid ${theme.COLORS.primary.blue}` : 'none'};
+	`,
+
+	secondary: css`
+		border-bottom: ${({ id, selectId, theme }) =>
+			id == selectId ? `3px solid ${theme.COLORS.primary.mint}` : 'none'};
+	`,
+}
+
+const circleVariantCSS = {
+	primary: css`
+		background-color: ${({ theme }) => theme.COLORS.primary.blue};
+	`,
+	secondary: css`
+		background-color: ${({ theme }) => theme.COLORS.primary.mint};
+	`,
+}
 
 const Wrapper = styled.div`
 	width: 1000px;
@@ -9,12 +42,7 @@ const Wrapper = styled.div`
 const Text = styled.div`
 	font-size: 20px;
 	font-weight: ${({ id, selectId }) => (id == selectId ? 700 : 400)};
-	color: ${({ id, selectId, theme, primary }) =>
-		id == selectId && primary
-			? theme.COLORS.primary.blue
-			: id == selectId
-				? theme.COLORS.primary.mint
-				: 'black'};
+	${({ variant }) => variantCSS[variant]}
 	padding-left: 30px;
 `
 
@@ -22,18 +50,12 @@ const TabWrapper = styled.div`
 	display: flex;
 	align-items: center;
 	width: 100px;
-	border-bottom: ${({ id, selectId, theme, primary }) =>
-		id == selectId && primary
-			? `3px solid ${theme.COLORS.primary.blue}`
-			: id == selectId
-				? `3px solid ${theme.COLORS.primary.mint}`
-				: 'none'};
+	${({ variant }) => borderVariantCSS[variant]}
 	position: relative;
 `
 
 const Circle = styled.div`
-	background-color: ${({ theme, primary }) =>
-		primary ? theme.COLORS.primary.blue : theme.COLORS.primary.mint};
+	${({ variant }) => circleVariantCSS[variant]}
 	width: 6px;
 	height: 6px;
 	border-radius: 50%;

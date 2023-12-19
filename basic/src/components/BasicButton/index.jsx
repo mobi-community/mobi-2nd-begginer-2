@@ -4,23 +4,26 @@ import { S } from './style'
 const BasicButton = ({
 	size,
 	shape,
-	primary,
+	variant,
 	children,
 	fontSize,
 	border,
 	badge,
 	...rest
 }) => {
+	console.log('badge', badge)
+
+	const { type, value } = badge
 	return (
 		<S.Button
 			size={size}
 			shape={shape}
-			primary={primary}
+			variant={variant}
 			fontSize={fontSize}
 			border={border}
 			{...rest}
 		>
-			{badge.value && <S.Badge type={badge.type}>{badge.value}</S.Badge>}
+			<S.Badge type={type}>{value}</S.Badge>
 			{children}
 		</S.Button>
 	)
@@ -33,7 +36,7 @@ BasicButton.defaultProps = {
 	children: 'Button',
 	border: false,
 	fontSize: 12,
-	primary: true,
+	variant: 'primary',
 	badge: {
 		type: 'alert',
 		value: 100,
@@ -43,6 +46,10 @@ BasicButton.defaultProps = {
 //해당 컴포넌트에 필요한 props를 정리해놓은 것
 //스토리북의 오른쪽 선택 탭
 BasicButton.propTypes = {
+	/**
+	 * 버튼의 테마
+	 */
+	variant: PropTypes.oneOf(['primary', 'secondary']),
 	/**
 	 * 버튼의 크기
 	 */

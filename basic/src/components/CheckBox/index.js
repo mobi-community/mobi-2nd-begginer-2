@@ -3,8 +3,9 @@ import PropTypes from 'prop-types'
 import { ReactComponent as Checked } from 'asset/checked.svg'
 import { ReactComponent as NonChecked } from 'asset/nonChecked.svg'
 import { useEffect, useState } from 'react'
+import { S } from './style'
 
-const CheckBox = ({ label, checked, id, size, fontSize, ...checkBoxProps }) => {
+const CheckBox = ({ label, checked, id, size, ...checkBoxProps }) => {
 	const [isChecked, setIsChecked] = useState(checked)
 
 	useEffect(() => {
@@ -19,21 +20,11 @@ const CheckBox = ({ label, checked, id, size, fontSize, ...checkBoxProps }) => {
 		<S.CheckBoxArea>
 			<input id={id} {...checkBoxProps} />
 			{isChecked ? (
-				size == 'small' ? (
-					<NonChecked onClick={isClickChecked} />
-				) : size == 'medium' ? (
-					<MediumNonChecked onClick={isClickChecked} />
-				) : (
-					<LargeNonChecked onClick={isClickChecked} />
-				)
-			) : size == 'small' ? (
-				<Checked onClick={isClickChecked} />
-			) : size == 'medium' ? (
-				<MediumChecked onClick={isClickChecked} />
+				<S.SizeChecked onClick={isClickChecked} size={size} />
 			) : (
-				<LargeChecked onClick={isClickChecked} />
+				<S.SizeNonChecked onClick={isClickChecked} size={size} />
 			)}
-			<S.Label htmlFor={id} fontSize={fontSize}>
+			<S.Label htmlFor={id} size={size}>
 				{label}
 			</S.Label>
 		</S.CheckBoxArea>
@@ -41,41 +32,6 @@ const CheckBox = ({ label, checked, id, size, fontSize, ...checkBoxProps }) => {
 }
 
 export default CheckBox
-
-const CheckBoxArea = styled.div`
-	display: flex;
-	align-items: center;
-	& input {
-		display: none;
-	}
-`
-const MediumNonChecked = styled(NonChecked)`
-	width: 30px;
-	height: 30px;
-`
-const LargeNonChecked = styled(NonChecked)`
-	width: 40px;
-	height: 40px;
-`
-
-const MediumChecked = styled(Checked)`
-	width: 30px;
-	height: 30px;
-`
-const LargeChecked = styled(Checked)`
-	width: 40px;
-	height: 40px;
-`
-
-const Label = styled.label`
-	padding-left: 1rem;
-	font-size: ${({ fontSize }) => (fontSize ? fontSize : 10)}px;
-`
-
-const S = {
-	CheckBoxArea,
-	Label,
-}
 
 CheckBox.propTypes = {
 	size: PropTypes.oneOf(['small', 'medium', 'large']),

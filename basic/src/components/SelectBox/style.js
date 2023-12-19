@@ -1,10 +1,21 @@
 import { boxShadow } from 'style/common'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+
+const sizeCSS = {
+	small: css`
+		width: 400px;
+	`,
+
+	medium: css`
+		width: 150px;
+	`,
+	large: css`
+		width: 100px;
+	`,
+}
 
 const SelectBoxWrapper = styled.ul`
-	width: ${({ size }) =>
-		size == 'large' ? 400 : size == 'medium' ? 150 : 100}px;
-	/* height: 120px; */
+	${({ size }) => sizeCSS[size]}
 `
 
 const InnerSelectBox = styled.div`

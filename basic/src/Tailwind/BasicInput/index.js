@@ -9,9 +9,9 @@ export const fontSizeCSS = {
 
 const TWBasicInput = ({ variant, size, label, placeholder }) => {
 	const sizeCSS = {
-		small: 'w-[300px]',
-		medium: 'w-[400px] ',
-		large: 'w-[500px] ',
+		small: 'w-[200px]',
+		medium: 'w-[300px] ',
+		large: 'w-[400px] ',
 		full: 'w-full',
 	}
 

@@ -35,21 +35,74 @@ export const navbarList = [
 const SignUpForm = () => {
 	return (
 		<>
-			<BasicButton>로그인</BasicButton>
-			<br />
-			<BasicButton variant={'secondary'} shape={'round'} size={'medium'}>
+			<BasicButton
+				variant={'primary'}
+				badge={{ value: 7, type: 'alert' }}
+				shape={'round'}
+				size={'medium'}
+				border={false}
+			>
 				회원가입
 			</BasicButton>
-			<BasicInput
-				label={'이메일'}
-				placeholder={'이메일을 입력해주세요.'}
-				primary={true}
-				width={500}
-				height={50}
-			/>
+			<br />
+			<BasicButton
+				variant={'secondary'}
+				badge={{ value: 2, type: 'warn' }}
+				shape={'default'}
+				size={'medium'}
+				border={false}
+			>
+				회원가입
+			</BasicButton>
+			<div style={{ width: 600 }}>
+				<BasicInput
+					label={'small'}
+					placeholder={'비밀번호를 입력해주세요.'}
+					primary={false}
+					size={'small'}
+				/>
+				<BasicInput
+					label={'medium'}
+					placeholder={'이메일을 입력해주세요.'}
+					primary={true}
+					size={'medium'}
+				/>
+				<BasicInput
+					label={'large'}
+					placeholder={'비밀번호를 입력해주세요.'}
+					primary={false}
+					size={'large'}
+				/>
+				<BasicInput
+					label={'full'}
+					placeholder={'비밀번호를 입력해주세요.'}
+					primary={false}
+					size={'full'}
+				/>
+			</div>
 			<SelectBox data={mockSelect} size={'small'} />
-			{/* <Tab data={navbarList} primary={'primary'} /> */}
-			<CheckBox type="checkbox" label={'로그인 상태 유지'} id={'Checked'} />
+			<SelectBox data={mockSelect} size={'medium'} />
+			<SelectBox data={mockSelect} size={'large'} />
+			<Tab data={navbarList} variant={'primary'} />
+			<Tab data={navbarList} variant={'secondary'} />
+			<CheckBox
+				type="checkbox"
+				label={'로그인 상태 유지'}
+				id={'small'}
+				size={'small'}
+			/>
+			<CheckBox
+				type="checkbox"
+				label={'로그인 상태 유지'}
+				id={'medium'}
+				size={'medium'}
+			/>
+			<CheckBox
+				type="checkbox"
+				label={'로그인 상태 유지'}
+				id={'large'}
+				size={'large'}
+			/>
 		</>
 	)
 }

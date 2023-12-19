@@ -20,6 +20,18 @@ const variantCSS = {
 	`,
 }
 
+const badgeVariantCSS = {
+	default: css`
+		background-color: ${({ theme }) => theme.COLORS['mint']};
+	`,
+	warn: css`
+		background-color: ${({ theme }) => theme.COLORS['warn']};
+	`,
+	alert: css`
+		background-color: ${({ theme }) => theme.COLORS['error']};
+	`,
+}
+
 const sizeCSS = {
 	small: css`
 		width: 64px;
@@ -64,8 +76,8 @@ const shapeCSS = {
 }
 
 const Button = styled.button`
-	${({ primary }) =>
-		primary ? variantCSS['primary'] : variantCSS['secondary']}
+	${({ variant }) =>
+		variant == 'primary' ? variantCSS['primary'] : variantCSS['secondary']}
 	${({ shape }) => shapeCSS[shape]}
     ${({ size }) => sizeCSS[size]}
 	${({ fontSize }) => fontSizeCSS[fontSize]}
@@ -77,17 +89,14 @@ const Button = styled.button`
 `
 
 const Badge = styled.div`
+	min-width: 33px;
+	min-height: 33px;
 	padding: 5px;
 	border-radius: 50%;
 	position: absolute;
 	top: -10px;
 	right: -10px;
-	background-color: ${({ type, theme }) =>
-		type === 'warn'
-			? theme.COLORS.warn
-			: type === 'alert'
-				? theme.COLORS.error
-				: theme.COLORS.primary.mint};
+	${({ type }) => badgeVariantCSS[type]};
 `
 
 export const S = {
