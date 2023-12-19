@@ -1,3 +1,4 @@
+/** @jsxImportSource @emotion/react */
 import { useState } from "react";
 import { flexCenter } from "../../style/common";
 import { css } from "@emotion/react";
@@ -5,6 +6,7 @@ import styled from "@emotion/styled";
 
 const EmPagination = ({ totalLength, pagesPerGroup, color, size, shape }) => {
   const perPage = 10;
+
   const totalPage = totalLength / perPage;
 
   const [currentPage, setCurrentPage] = useState(1);

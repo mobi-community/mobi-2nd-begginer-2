@@ -1,3 +1,4 @@
+/** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 
 const resetStyle = css`
@@ -44,7 +45,7 @@ const resetStyle = css`
 
   button {
     background: none;
-    border: 0;
+    border: none;
     cursor: pointer;
   }
 

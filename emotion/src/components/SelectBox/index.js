@@ -58,7 +58,7 @@ const InnerSelectBox = styled.div`
   padding: 15px;
   align-items: center;
   border-radius: 10px;
-  background-color: ${({ theme }) => theme.COLORS.white};
+  background-color: white;
   height: 40px;
   width: 100%;
   font-size: 15px;
@@ -68,7 +68,7 @@ const InnerSelectBox = styled.div`
 const OptionListWrapper = styled.div`
   width: 100%;
   margin-top: 10px;
-  background-color: ${({ theme }) => theme.COLORS.white};
+  background-color: white;
   border-radius: 10px;
   :last-child {
     border-bottom: none;

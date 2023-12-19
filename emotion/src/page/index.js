@@ -1,3 +1,4 @@
+/** @jsxImportSource @emotion/react */
 import EmBasicButton from "../components/BasicButton";
 import EmBasicInput from "../components/BasicInput";
 import EmPagination from "../components/Pagination";
@@ -5,6 +6,7 @@ import EmCheckBox from "../components/CheckBox";
 import theme from "../style/theme";
 import EmTab from "components/Tab";
 import EmSelectBox from "components/SelectBox";
+import { css } from "@emotion/react";
 
 const data = ["option1", "option2", "option3", "option4"];
 
@@ -35,28 +37,38 @@ export const navbarList = [
   },
 ];
 
+const divStyle = css`
+  background-color: hotpink;
+  font-size: 24px;
+  border-radius: 4px;
+  padding: 32px;
+  text-align: center;
+  &:hover {
+    color: white;
+  }
+`;
+
 const EmotionPage = () => {
   return (
     <>
-      <div style={{ color: theme.COLORS.error }}>emotion</div>
+      <div css={divStyle}>Hover to change color.</div>
       <EmBasicButton
         variant={"primary"}
-        badge={{ value: 2, type: "warn" }}
-        shape={"round"}
-        size={"large"}
-        border={false}
-      >
-        회원가입
-      </EmBasicButton>
-
-      <EmBasicButton
-        variant={"secondary"}
-        badge={{ value: 10, type: "error" }}
-        shape={"round"}
-        size={"large"}
+        shape={"default"}
+        size={"medium"}
+        fontSize={"medium"}
         border={false}
       >
         로그인
+      </EmBasicButton>
+      <EmBasicButton
+        variant={"secondary"}
+        shape={"round"}
+        size={"large"}
+        fontSize={"large"}
+        border={false}
+      >
+        회원가입
       </EmBasicButton>
       <EmBasicInput
         variant="primary"
