@@ -14,7 +14,6 @@ const SignInForm = () => {
         right
       </Body>
       <IconContainer>
-        {/* 뭔가 줄일 수 있을 거 같은데.. 방법을 모르겠어용~ */}
         <PopUpButton variant={"purple"} size={"purpleCircle"}>
           <img src={Facebook} />
         </PopUpButton>
@@ -55,4 +54,10 @@ const IconContainer = styled.div`
   width: 50%;
   display: flex;
   justify-content: space-evenly;
+
+  & > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;

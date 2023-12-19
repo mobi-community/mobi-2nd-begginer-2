@@ -19,7 +19,7 @@ const FONT_SIZE = {
 };
 
 const FONT_WEIGHT = {
-  thin: 400,
+  thin: 300,
   regular: 500,
   bold: 700,
 };
@@ -27,9 +27,9 @@ const FONT_WEIGHT = {
 const BOX_SHADOW = {
   container: "-5px -5px 10px #fff, 5px 5px 10px #babebc",
   drop: "-5px -5px 10px #fff, 5px 5px 8px #babebc",
-  inner: "inset 1px 1px 2px #babebc, inset -1px -1px 2px #fff",
+  inner: "inset 5px 5px 10px #babebc, inset -5px -5px 10px #fff",
   dropPurple: "-5px -5px 10px #6565F4, 5px 5px 8px #2F2FC5",
-  innerPurple: "inset 1px 1px 2px #2F2FC5, inset -1px -1px 2px #6565F4",
+  innerPurple: "inset 5px 5px 10px #2F2FC5, inset -5px -5px 10px #6565F4",
 };
 
 const theme = {

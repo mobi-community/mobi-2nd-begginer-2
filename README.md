@@ -33,7 +33,7 @@ https://lyrical-brain-e0f.notion.site/mobi-beginner-week-2-bb8596254a084efdb5761
 <p>design token</p>
 <img src="https://github.com/55555-Jyeon/admin-toggle-page/assets/134191817/1b80108a-4209-4812-9c9f-75281768df35">
 <p>간단하게 만든 회원가입 폼입니다.</p>
-<img src="https://github.com/55555-Jyeon/admin-toggle-page/assets/134191817/eef85e1e-2980-4681-a5b1-ed8c9480fa1f">
+<img src="https://github.com/55555-Jyeon/story-book/assets/134191817/8f39af0a-093b-49a3-83a7-b286f4aa8735">
 <img src="https://github.com/55555-Jyeon/admin-toggle-page/assets/134191817/43c65336-5e0f-48d9-959f-b24295868c0b">
 </p>
 
@@ -228,7 +228,6 @@ router 관련된 부분은 storybook에서 어떻게 사용하는거지..? 공�
 - 늦은 합류로 이전 코드 복기 중 -
 
 
-
 ```
 
 ---
@@ -238,7 +237,12 @@ router 관련된 부분은 storybook에서 어떻게 사용하는거지..? 공�
 - storybook : pagination 만들기
 - style 라이브러리와의 차이점을 명확히 구분하기
 
-<p>tailwind 진행 중</p>
+
+<p align="center">
+<p>tailwind로 같은 화면 구현 완료했습니다</p>
+<img src="https://github.com/55555-Jyeon/story-book/assets/134191817/a32470ca-1340-4c69-82a3-d04eb95c89c9" alt="tailwind">
+</p>
+
 
 ```
 // 변환다시하기 할머니속도라...
@@ -279,5 +283,3 @@ router 관련된 부분은 storybook에서 어떻게 사용하는거지..? 공�
 주현 회고록)
 
 ```
-
-tailwind 적용해보았습니다.

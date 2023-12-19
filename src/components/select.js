@@ -23,5 +23,8 @@ const SelectBox = styled.div`
     border-radius: 4px;
     background-color: ${({ theme }) => theme.COLORS.gray[100]};
     box-shadow: ${({ theme }) => theme.BOX_SHADOW.drop};
+    &:hover{
+      box-shadow: ${({ theme }) => theme.BOX_SHADOW.inner};
+    }
   }
 `;

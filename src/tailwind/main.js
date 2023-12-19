@@ -5,7 +5,7 @@ import T_SignUpForm from "./t_signUp_form";
 const T_MainPage = () => {
   return (
     <div className="w-screen h-screen flex items-center justify-center">
-      <div className="flex w-5/6 h-4/6 items-center justify-center shadow-container rounded-3xl">
+      <div className="flex w-[1424px] h-[898px] items-center justify-center shadow-container rounded-3xl">
         <div className="flex-auto w-full h-full bg-purple-500 text-white rounded-l-3xl">
           <T_SignInForm />
         </div>

@@ -59,7 +59,7 @@ const SignUpForm = () => {
             <PopUpButton
               variant={"gray"}
               size={"circle"}
-              label={"male"}
+              label={"Male"}
               type={"button"}
             >
               <img src={Male} />
@@ -67,7 +67,7 @@ const SignUpForm = () => {
             <PopUpButton
               variant={"gray"}
               size={"circle"}
-              label={"female"}
+              label={"Female"}
               type={"button"}
             >
               <img src={Female} />
@@ -75,7 +75,7 @@ const SignUpForm = () => {
             <PopUpButton
               variant={"gray"}
               size={"circle"}
-              label={"secret"}
+              label={"Secret"}
               type={"button"}
             >
               <Secret>?</Secret>
@@ -83,7 +83,7 @@ const SignUpForm = () => {
           </div>
         </OneRow>
         <PopUpButton variant={"gray"} size={"submit"}>
-          Sign Up
+          SIGN UP
         </PopUpButton>
       </Form>
     </Container>
@@ -125,12 +125,19 @@ const OneRow = styled.div`
   }
   & > div {
     margin-left: 8%;
+    display: flex;
+    flex-direction: row;
 
     & > button {
       margin-left: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     & > label {
       margin-left: 10px;
+      display: flex;
+      align-items: center;
     }
   }
   & > div:nth-of-type(1) {

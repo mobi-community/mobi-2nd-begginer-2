@@ -30,9 +30,11 @@ const variantCSS = {
 };
 const sizeCSS = {
   submit: css`
-    width: 280px;
-    height: 42px;
+    width: 278px;
+    height: 70px;
     border-radius: 16px;
+    font-size: ${({ theme }) => theme.FONT_SIZE.medium};
+    font-weight: ${({ theme }) => theme.FONT_WEIGHT.thin};
   `,
   purpleCircle: css`
     background: ${({ theme }) => theme.COLORS.purple[500]};
