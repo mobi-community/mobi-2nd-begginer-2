@@ -1,0 +1,6 @@
+@layer reset, base, tokens, recipes, utilities; << index.css에 설정
+{
+  "scripts": {
++    "prepare": "panda codegen",
+  }
+}

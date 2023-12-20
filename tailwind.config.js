@@ -3,7 +3,6 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      // 교수님... drop...하고싶어요........ㅋ
       boxShadow: {
         container: "-5px -5px 10px #fff, 5px 5px 10px #babebc",
         drop: "-5px -5px 10px #fff, 5px 5px 8px #babebc",

@@ -1,8 +1,8 @@
 import { css, styled } from "styled-components";
 
-const Select = ({ variant, size, children, ...rest }) => {
+const Select = ({ children, ...rest }) => {
   return (
-    <SelectBox variant={variant} size={size} {...rest}>
+    <SelectBox {...rest}>
       <select>{children}</select>
     </SelectBox>
   );
@@ -23,7 +23,7 @@ const SelectBox = styled.div`
     border-radius: 4px;
     background-color: ${({ theme }) => theme.COLORS.gray[100]};
     box-shadow: ${({ theme }) => theme.BOX_SHADOW.drop};
-    &:hover{
+    &:hover {
       box-shadow: ${({ theme }) => theme.BOX_SHADOW.inner};
     }
   }
