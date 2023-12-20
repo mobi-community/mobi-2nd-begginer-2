@@ -124,38 +124,71 @@ theme 적용을 위해서 다음과 같이 `tailwind-css`에 다음과 같이 th
 
 해결을 위해 `jsconfig.json`에서 include에 `src`외에 `style-systen`을 추가했지만, 해결하지 못했습니다. 
 
-### 스토리북
+# 스토리북
 
-Pagination
+#### Pagination
 
 https://github.com/mobi-community/mobi-2th-begginer-2/assets/125418818/d3910b6b-db65-4ad8-9349-a70558f2fd88
 
-BasicButton
+#### BasicButton
 
 https://github.com/mobi-community/mobi-2th-begginer-2/assets/125418818/7399f020-4698-4dab-b75d-3f2b1c7f6c2a
 
-BasicInput
+#### BasicInput
 
 https://github.com/mobi-community/mobi-2th-begginer-2/assets/125418818/d7c22a76-2c65-4db7-b229-0b3906c2ec46
 
-CheckBox
+#### CheckBox
 
 https://github.com/mobi-community/mobi-2th-begginer-2/assets/125418818/949c1dda-9691-4955-b9cf-513459767918
 
-SelectBox
+#### SelectBox
 
 https://github.com/mobi-community/mobi-2th-begginer-2/assets/125418818/6c6bdf6a-c77a-4dfb-8ea8-235198c74933
 
-Tab
+#### Tab
 
 https://github.com/mobi-community/mobi-2th-begginer-2/assets/125418818/86fd4042-d9d4-4ba1-88da-66fa1cf73a7d
 
-### UI 라이브러리
+# UI 라이브러리
+
+### 1. MUI
+
+모든 라이브러리 중에 가장 리액트에 특화되고, 익숙한 느낌이었습니다. 기본 스타일이 예뻐서 많은 사람들이 사용하는 이유를 깨달았습니다.
+
+https://github.com/mobi-community/mobi-2th-begginer-2/assets/125418818/f5b5a9d2-8c4a-48f1-b77b-f4ce561f70ff
 
 
+###. 2. Chakra UI
+
+개인적으로 공식문서에 정리가 잘 되어 있어, 사용하기가 편리했던 라이브러리였습니다. 저희 둘다 처음 사용해봤는데
+사용이 쉬워 많이 사용할 것 같습니다.
+
+![스크린샷 2023-12-21 오전 3 47 56](https://github.com/mobi-community/mobi-2th-begginer-2/assets/125418818/cc309a25-53d0-44f4-b7c2-53dc4a5efbb1)
+
+###. 3, 5. TailwindCSS UI + Heaedless UI
+
+tailwind UI의 경우 유료 버전이 많이 쓸만한 게 없었고, headless UI 의 경우는 같은 tailwind 기반이지만 사용할 컴포넌트가 매우 많아서 좋았습니다. 
+css 코드가 숨겨져 있는 타 라이브러리와 달리, 위 라이브러리들은 className으로 tailwind css 코드가 있어서 수정하기가 좋다는 생각이 들었습니다. 
+
+<img width="902" alt="스크린샷 2023-12-21 오전 3 59 53" src="https://github.com/mobi-community/mobi-2th-begginer-2/assets/125418818/37dfcc3b-8b2d-4d11-8c07-d599247e83d5">
+
+###. 4. Shadcn UI
+
+사용법이 신기하다고 생각했던게, 라이브러리를 설치하는 것이 아닌 원하는 UI를 실행해서 공유 컴포넌트 코드를 가져오는 방식으로 사용하는 거였습니다.
+저희가 처음에 정의했던 props를 통한 공유 컴포넌트와 코드가 매우 비슷해서 적용하기가 어렵지 않았습니다. 
+이러한 방식으로 통해 라이브러리의 가벼움, 종속성 줄이기, 커스텀 쉬움 이라는 장점이 생겨서 좋은 것 같습니다. 
+
+<img width="337" alt="스크린샷 2023-12-21 오전 4 04 13" src="https://github.com/mobi-community/mobi-2th-begginer-2/assets/125418818/540f8016-d33f-43d6-9ad4-826c48be6b7f">
 
 # 💡 회고
 
 ### Levi
 
 ### Rin
+
+개인적으로 평소에는 관심이 있었지만 사용하지 못했던 라이브러리부터(tailwind), 모르던 라이브러리까지 모두 사용해보면서, 각각의 장단점을 익힐 수 있었던 유익한 한 주 였던 것 같습니다. (이번주는 쉽다고 생각했는데.. 
+css는 파면 팔 수록 시간 도둑인 것 같아요..) 그리고 예전에 한번 봤짐나 내외했던(?) 스토리북을 이제 잘 쓸 수 있어서 행복했습니다. 
+개인적으로 chakra를 좋은 UI 라이브러리라고 생각했고, Shadcn UI 의 경우는 신선했습니다. 개인적으로 emotion을 능가한다는 panda css를 써보지 못한게 아쉬웠습니다. 다음에도 에러를 해결해서 적용시켜 봐야 겠습니다!
+그리고 props를 사용한 공유 컴포넌트를 만드는 과정에서, theme 외의 스타일 코드를 어떻게 하면 재사용성을 줄지 생각해봤는데, 방법을 잘 몰라 쉽지 않았습니다.  컴포넌트마다 다른 width, height는 힘들 것 같고, font-size같은 경우는 재사용이 가능할 것 같다는 생각이 들었습니다. 
+공부하는 과정에서 storybook의 실제 기업 사용 사례를 보는게 도움이 많이 되었는데, 다른 분들에게도 이를 추천하고 싶습니다! 
