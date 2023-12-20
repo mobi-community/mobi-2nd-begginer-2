@@ -1,26 +1,13 @@
-import { styled } from "../styled-system/jsx";
-import { Circle, CircleProps } from "../styled-system/jsx";
+import { css } from "../../styled-system/css/css.mjs";
 
-const P_PopUpButton = () => {
-  return <Button></Button>;
+const P_PopUpButton = ({ label, children }) => {
+  return (
+    <div>
+      <button className={css({})}>{children}</button>
+      <label>{label}</label>
+    </div>
+  );
 };
 export default P_PopUpButton;
 
-P_PopUpButton.propTypes = {
-  circleSize: CircleProps["size"],
-};
-
-const Button = styled("button", {
-  basic: {
-    backgroundColor: "#fff",
-    border: "1px solid #000",
-  },
-  sm: {
-    backgroundColor: "#fff",
-    border: "1px solid #000",
-  },
-  lg: {
-    backgroundColor: "#fff",
-    border: "1px solid #000",
-  },
-});
+P_PopUpButton.propTypes = {};

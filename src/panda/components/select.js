@@ -1,5 +1,9 @@
-const E_Select = () => {
-  return <select></select>;
+const P_Select = ({ children }) => {
+  return (
+    <>
+      <select>{children}</select>
+    </>
+  );
 };
 
-export default E_Select;
+export default P_Select;

@@ -96,7 +96,6 @@ const Container = styled.div`
   height: 100%;
 `;
 const Title = styled.h2`
-  font-size: ${({ theme }) => theme.FONT_SIZE.large};
   font-weight: ${({ theme }) => theme.FONT_WEIGHT.bold};
   color: ${({ theme }) => theme.COLORS.purple[500]};
   margin: 7% 0;
