@@ -26,21 +26,19 @@ button, checkbox, input, modal, select, pagenation
 # 페이지 구성
 
 #### 공용 컴포넌트 페이지, storybook, MUI icon
-
 ![Alt text](image-1.png)
 ![Alt text](image-2.png)
+
 블랙모드
 ![Alt text](image-3.png)
 
 #### tailwind
-
-tailwind UI + headless UI
+tailwind UI + headless UI <br>
 ![Alt text](image-4.png)
 ![Alt text](image-5.png)
 
 #### emotion
-
-emotion + chakra UI
+emotion + chakra UI <br>
 ![Alt text](image-6.png)
 
 # UI 라이브러리
