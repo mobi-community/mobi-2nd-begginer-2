@@ -7,8 +7,7 @@ function App() {
   return (
     <>
       {/* <Tailwind /> */}
-      {/* <Emotion /> */}
-      <Panda />
+      <Emotion />
     </>
   );
 }
